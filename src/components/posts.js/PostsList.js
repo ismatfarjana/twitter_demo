@@ -3,7 +3,7 @@ import React from "react";
 const PostList = () => {
   return (
     <div>
-      <div>List Tweet</div>
+      <div>All Tweets</div>
     </div>
   );
 };
