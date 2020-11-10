@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import GoogleAuth from "./GoogleAuth";
 
 const Header = () => {
   return (
@@ -13,7 +14,10 @@ const Header = () => {
           Home
         </Link>
       </div>
-      <div className="header-right-menu"></div>
+      <div className="header-right-menu">
+        {" "}
+        <GoogleAuth />
+      </div>
     </div>
   );
 };
