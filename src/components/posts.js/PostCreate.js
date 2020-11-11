@@ -1,6 +1,8 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
 import propic from "../../assets/propic.png";
+import { connect } from "react-redux";
+import { createTweeet } from "../../actions";
 
 class PostCreate extends React.Component {
   renderError({ error, touched }) {
@@ -14,6 +16,7 @@ class PostCreate extends React.Component {
   }
   //helper method for Field. it will be a controlled element
   renderInput = ({ input, label, meta }) => {
+    console.log(meta);
     return (
       <div className="field">
         <label>{label}</label>
@@ -25,9 +28,11 @@ class PostCreate extends React.Component {
   };
 
   //handleing submission
-  onSubmit(formValues) {
+  onSubmit = formValues => {
     console.log(formValues);
-  }
+    this.props.createTweeet(formValues);
+    // console.log(this.props);
+  };
 
   render() {
     return (
@@ -35,7 +40,7 @@ class PostCreate extends React.Component {
         <div className="form_body">
           <img className="propic" src={propic} alt="" />
           <Field
-            name="post"
+            name="tweeet"
             component={this.renderInput}
             label="What's happening?"
           />
@@ -58,7 +63,9 @@ const validate = formValues => {
   return errors;
 };
 
-export default reduxForm({
+const formWrapped = reduxForm({
   form: "postCreate",
   validate
 })(PostCreate);
+
+export default connect(null, { createTweeet })(formWrapped);
