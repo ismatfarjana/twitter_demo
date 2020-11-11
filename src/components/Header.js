@@ -13,9 +13,6 @@ const Header = () => {
         <Link to="/" className="item">
           Home
         </Link>
-      </div>
-      <div className="header-right-menu">
-        {" "}
         <GoogleAuth />
       </div>
     </div>
