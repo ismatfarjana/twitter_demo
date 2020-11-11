@@ -26,10 +26,10 @@ class GoogleAuth extends Component {
     });
   }
 
-  //call back function for event listener
+  //call back function for event listener, passing the userid with it
   onAuthChange = isSignedIn => {
     if (isSignedIn) {
-      this.props.signIn();
+      this.props.signIn(this.auth.currentUser.get().getId());
     } else {
       this.props.signOut();
     }
