@@ -4,7 +4,7 @@ const SearchBar = () => {
   return (
     <div>
       <div>
-        <input className="search" placeholder=" 🔍 Search Twittter" />
+        <input className="search" placeholder=" 🔍 Search Dweeter" />
       </div>
       <div className="box">
         <h5>What's going on</h5>
