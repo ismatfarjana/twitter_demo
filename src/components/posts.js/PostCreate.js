@@ -16,7 +16,7 @@ class PostCreate extends React.Component {
   }
   //helper method for Field. it will be a controlled element
   renderInput = ({ input, label, meta }) => {
-    console.log(meta);
+    // console.log(meta);
     return (
       <div className="field">
         <label>{label}</label>
@@ -46,7 +46,7 @@ class PostCreate extends React.Component {
           />
         </div>
 
-        <button className="button">Tweeet</button>
+        <button className="button">Dweet</button>
       </form>
     );
   }
