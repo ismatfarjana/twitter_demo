@@ -17,7 +17,7 @@ const App = () => {
           <Header />
           <div className="container-parts">
             <Route path="/" exact component={PostsList} />
-            <Route path="/tweets/new" exact component={PostCreate} />
+            <Route path="/tweeets" exact component={PostCreate} />
             <Route path="/tweets/edit" exact component={PostEdit} />
             <Route path="/tweets/delete" exact component={PostDelete} />
             <Route path="/tweets/show" exact component={PostShow} />
