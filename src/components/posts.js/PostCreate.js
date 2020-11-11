@@ -1,5 +1,6 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
+import propic from "../../assets/propic.png";
 
 class PostCreate extends React.Component {
   renderError({ error, touched }) {
@@ -31,11 +32,15 @@ class PostCreate extends React.Component {
   render() {
     return (
       <form onSubmit={this.props.handleSubmit(this.onSubmit)} className="form">
-        <Field
-          name="post"
-          component={this.renderInput}
-          label="What's happening?"
-        />
+        <div className="form_body">
+          <img className="propic" src={propic} alt="" />
+          <Field
+            name="post"
+            component={this.renderInput}
+            label="What's happening?"
+          />
+        </div>
+
         <button className="button">Tweeet</button>
       </form>
     );
@@ -48,7 +53,7 @@ const validate = formValues => {
 
   if (!formValues.post) {
     // only ran if user didnot give any title
-    errors.post = " ⚠️ You must enter a post!";
+    errors.post = "Enter a post!";
   }
   return errors;
 };

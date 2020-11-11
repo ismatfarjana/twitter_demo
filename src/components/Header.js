@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
-import GoogleAuth from "./GoogleAuth";
+import home from "../assets/home.png";
 
 const Header = () => {
   return (
@@ -11,9 +11,8 @@ const Header = () => {
           <img src={logo} alt="logo" />
         </Link>
         <Link to="/" className="item">
-          Home
+          <img className="home" src={home} alt="home" />
         </Link>
-        <GoogleAuth />
       </div>
     </div>
   );

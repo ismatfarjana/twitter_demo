@@ -6,11 +6,10 @@ const PostList = () => {
     <div>
       <h4 className="container-body">Home</h4>
       <div className="writetweet">
-        {" "}
         <PostCreate />
       </div>
 
-      <div>Posts</div>
+      <div className="allPosts">Posts</div>
     </div>
   );
 };
