@@ -36,6 +36,22 @@ img {
   margin-bottom: calc(4px + 1vmin);
   /* background-color: rgb(151, 69, 206); */
 }
+.google-button {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  background-color: #e44332;
+  text-decoration: none;
+  border: none;
+  border-radius: 2px;
+  height: auto;
+  color: white;
+  padding: 5px 10px;
+  font-size: calc(1px + 1vw);
+
+  margin-top: calc(2px + 1rem);
+  font-family: "Poppins", sans-serif;
+}
 
 .container-body {
   display: flex;
